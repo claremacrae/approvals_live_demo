@@ -1,8 +1,12 @@
 set(LIB_NAME shared_code)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 add_library(${LIB_NAME}
+        Drawing.cpp
+        Drawing.h
         HelloApprovals.cpp
         HelloApprovals.h
+        FileUtilities.cpp
+        FileUtilities.h
         )
 add_library(
         ${LIB_NAME}::${LIB_NAME}
