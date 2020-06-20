@@ -10,6 +10,7 @@ public:
     // location of this source code.
     explicit SVGDrawing(const std::string& source_svg_file);
 
+    // Return the SVG text from the file
     std::string content() const;
 
 private:
