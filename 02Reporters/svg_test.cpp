@@ -13,3 +13,5 @@ TEST_CASE("SVG Test")
                           .fileOptions()
                           .withFileExtension(".svg"));
 }
+
+// TODO Test "drawing1.svg" as well
