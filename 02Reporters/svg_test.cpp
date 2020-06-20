@@ -19,4 +19,8 @@ TEST_CASE("SVG Test")
     verifyDrawing(drawing);
 }
 
-// TODO Test "drawing1.svg" as well
+TEST_CASE("SVG Test 2")
+{
+    SVGDrawing drawing("drawing2.svg");
+    verifyDrawing(drawing);
+}
