@@ -11,5 +11,4 @@ run_conan()
 set(CMAKE_VERBOSE_MAKEFILE off)
 
 enable_testing()
-add_subdirectory(01BeforeApprovals)
 add_subdirectory(02HelloApprovals)
