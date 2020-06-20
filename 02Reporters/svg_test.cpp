@@ -1,4 +1,5 @@
 #include "Drawing.h"
+
 #include <catch2/catch.hpp>
 #include <ApprovalTests.hpp>
 
