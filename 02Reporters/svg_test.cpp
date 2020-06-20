@@ -7,5 +7,8 @@ using namespace ApprovalTests;
 TEST_CASE("SVG Test")
 {
     Drawing drawing("drawing1.svg");
-    Approvals::verify(drawing.content());
+    Approvals::verify(drawing.content(),
+                      Options(Mac::BeyondCompareReporter())
+                          .fileOptions()
+                          .withFileExtension(".svg"));
 }
