@@ -6,7 +6,7 @@ using namespace ApprovalTests;
 
 TEST_CASE("SVG Test")
 {
-    Drawing drawing;
+    Drawing drawing("drawing1.svg");
     Approvals::verify(drawing, [](const auto& drawing, auto& stream) {
         stream << drawing.content();
     });
