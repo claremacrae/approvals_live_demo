@@ -1,4 +1,5 @@
 #include "SVGDrawing.h"
+#include "SVGReporter.h"
 
 #include <catch2/catch.hpp>
 #include <ApprovalTests.hpp>
@@ -8,7 +9,7 @@ using namespace ApprovalTests;
 void verifyDrawing(const SVGDrawing& drawing)
 {
     Approvals::verify(drawing.content(),
-                      Options(Mac::BeyondCompareReporter())
+                      Options(SVGReporter())
                           .fileOptions()
                           .withFileExtension(".svg"));
 }
