@@ -1,6 +1,7 @@
 #include <catch2/catch.hpp>
+#include "HelloApprovals.h"
 
 TEST_CASE("First Test")
 {
-    CHECK(40 + 2 == 42);
+    CHECK(HelloApprovals::helloApprovals() == "Hello Approvals");
 }
