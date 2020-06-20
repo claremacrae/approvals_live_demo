@@ -3,11 +3,16 @@
 bool PNGViewingReporter::report(std::string received,
                                 std::string approved) const
 {
-    // received and approved are files in graphics format
+    // received and approved are files in SVG format
     std::string receivedAsPNG = convertToPNG(received);
     std::string approvedAsPNG = convertToPNG(approved);
     ApprovalTests::Mac::BeyondCompareReporter beyondCompareReporter;
-    return beyondCompareReporter.report(receivedAsPNG, approvedAsPNG);
+
+    // First show the differences in the converted .png files:
+    beyondCompareReporter.report(receivedAsPNG, approvedAsPNG);
+
+    // Then show the text differences in .svg files:
+    return beyondCompareReporter.report(received, approved);
 }
 
 std::string
