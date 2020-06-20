@@ -7,6 +7,8 @@ add_library(${LIB_NAME}
         HelloApprovals.h
         FileUtilities.cpp
         FileUtilities.h
+        StringUtilities.cpp
+        StringUtilities.h
         )
 add_library(
         ${LIB_NAME}::${LIB_NAME}
