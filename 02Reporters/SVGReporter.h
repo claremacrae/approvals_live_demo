@@ -1,9 +1,9 @@
-#ifndef DEMO_PNGVIEWINGREPORTER_H
-#define DEMO_PNGVIEWINGREPORTER_H
+#ifndef DEMO_SVGREPORTER_H
+#define DEMO_SVGREPORTER_H
 
 #include <ApprovalTests.hpp>
 
-class PNGViewingReporter : public ApprovalTests::Reporter
+class SVGReporter : public ApprovalTests::Reporter
 {
 public:
     bool report(std::string received,
@@ -12,4 +12,4 @@ public:
     std::string convertToPNG(std::string graphicsFile) const;
 };
 
-#endif //DEMO_PNGVIEWINGREPORTER_H
+#endif //DEMO_SVGREPORTER_H

@@ -1,7 +1,7 @@
-#include "PNGViewingReporter.h"
+#include "SVGReporter.h"
 
-bool PNGViewingReporter::report(std::string received,
-                                std::string approved) const
+bool SVGReporter::report(std::string received,
+                         std::string approved) const
 {
     // received and approved are files in SVG format
     std::string receivedAsPNG = convertToPNG(received);
@@ -15,8 +15,7 @@ bool PNGViewingReporter::report(std::string received,
     return beyondCompareReporter.report(received, approved);
 }
 
-std::string
-PNGViewingReporter::convertToPNG(std::string graphicsFile) const
+std::string SVGReporter::convertToPNG(std::string graphicsFile) const
 {
     std::filesystem::path inputPath(graphicsFile);
     std::string extension = inputPath.extension();
