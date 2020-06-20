@@ -3,6 +3,8 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(${EXE_NAME}
         main.cpp
         svg_test.cpp
+        PNGViewingReporter.cpp
+        PNGViewingReporter.h
         )
 target_link_libraries(${EXE_NAME}
         shared_code::shared_code
