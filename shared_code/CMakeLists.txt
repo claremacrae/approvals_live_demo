@@ -3,10 +3,14 @@ set(CMAKE_CXX_STANDARD 17)
 add_library(${LIB_NAME}
         SVGDrawing.cpp
         SVGDrawing.h
+        ComplexOperation.cpp
+        ComplexOperation.h
         HelloApprovals.cpp
         HelloApprovals.h
         FileUtilities.cpp
         FileUtilities.h
+        Logger.cpp
+        Logger.h
         StringUtilities.cpp
         StringUtilities.h
         )
