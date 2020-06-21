@@ -11,5 +11,5 @@ add_subdirectory(shared_code)
 add_subdirectory(third_party)
 
 enable_testing()
-add_subdirectory(01HelloApprovals)
+add_subdirectory(HelloApprovals)
 add_subdirectory(02Reporters)
