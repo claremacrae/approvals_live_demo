@@ -14,3 +14,9 @@ target_link_libraries(${EXE_NAME}
         )
 target_compile_definitions(${EXE_NAME} PRIVATE CATCH_CONFIG_FAST_COMPILE)
 add_test(NAME ${EXE_NAME} COMMAND ${EXE_NAME})
+
+set(COVERAGE_TARGET ${EXE_NAME}_branch_coverage)
+setup_target_for_coverage_lcov(
+        NAME ${COVERAGE_TARGET}
+        EXECUTABLE ${EXE_NAME}
+        DEPENDENCIES ${EXE_NAME})
