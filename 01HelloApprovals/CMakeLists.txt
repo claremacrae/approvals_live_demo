@@ -6,8 +6,8 @@ add_executable(${EXE_NAME}
         )
 target_link_libraries(${EXE_NAME}
         shared_code::shared_code
-        CONAN_PKG::approvaltests.cpp
-        CONAN_PKG::catch2
+        ApprovalTests::ApprovalTests
+        Catch2::Catch2
         )
 target_compile_definitions(${EXE_NAME} PRIVATE CATCH_CONFIG_FAST_COMPILE)
 add_test(NAME ${EXE_NAME} COMMAND ${PROJECT_NAME})
