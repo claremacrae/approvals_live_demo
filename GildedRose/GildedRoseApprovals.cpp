@@ -16,6 +16,8 @@ ostream& operator<<(ostream& os, const Item& obj)
     // clang-format on
 }
 
+// NOTE: All tests are disabled initially, with Catch's "[!hide]" tag
+
 TEST_CASE("TestOneValue", "[!hide]")
 {
     vector<Item> items;
