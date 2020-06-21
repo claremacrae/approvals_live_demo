@@ -22,7 +22,7 @@ TEST_CASE("TestOneValue", "[!hide]")
     items.push_back(Item("Foo", 0, 0));
     GildedRose app(items);
     app.updateQuality();
-    Approvals::verify(app.items[0]); // 52% line coverage
+    Approvals::verify(app.items[0]); // 51% line coverage
 }
 
 /* Things to note
@@ -35,7 +35,7 @@ TEST_CASE("TestOneValue", "[!hide]")
  * 3. If we are testing a class that has its own output stream operator, Approvals
  *    would use that automatically. As Item doesn't have one, we provide
  *    an implementation here in the testsuite.
- * 3. Still only 52% coverage of GildedRose.cpp
+ * 3. Still only 51% coverage of GildedRose.cpp
  */
 
 TEST_CASE("TestMultipleValues", "[!hide]")

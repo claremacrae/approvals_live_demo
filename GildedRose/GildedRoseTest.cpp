@@ -14,7 +14,7 @@ TEST_CASE("Foo")
 /*
  * Things to note here:
  * 
- * - 52% coverage of GildedRose.cpp
+ * - 51% coverage of GildedRose.cpp
  * - The actual calculation result (new quality) is not tested
  */
 
@@ -32,6 +32,6 @@ TEST_CASE("TestUpdateQuality")
 /*
  * Things to note here:
  * 
- * - 52% still coverage of GildedRose.cpp
+ * - 51% still coverage of GildedRose.cpp
  * - Now testing the actual calculation result (new quality)
  */
