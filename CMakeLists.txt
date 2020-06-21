@@ -29,6 +29,4 @@ add_subdirectory(shared_code)
 add_subdirectory(third_party)
 
 enable_testing()
-add_subdirectory(demos/HelloApprovals)
-add_subdirectory(demos/SVGFiles)
-add_subdirectory(demos/GildedRose)
+add_subdirectory(demos)
