@@ -3,8 +3,8 @@ set(EXE_NAME GildedRose)
 set(CMAKE_CXX_STANDARD 17)
 add_executable(${EXE_NAME}
         main.cpp
-        GildedRose.cc
-        GildedRose.h
+        lib/GildedRose.cc
+        lib/GildedRose.h
         GildedRoseTest.cpp
         GildedRoseApprovals.cpp
         )
