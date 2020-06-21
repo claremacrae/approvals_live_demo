@@ -12,4 +12,4 @@ add_subdirectory(third_party)
 
 enable_testing()
 add_subdirectory(HelloApprovals)
-add_subdirectory(02Reporters)
+add_subdirectory(SVGFiles)
