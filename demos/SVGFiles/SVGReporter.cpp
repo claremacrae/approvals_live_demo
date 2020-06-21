@@ -1,18 +1,20 @@
 #include "SVGReporter.h"
 
-bool SVGReporter::report(std::string received,
-                         std::string approved) const
+bool SVGReporter::report(std::string receivedSVGFile,
+                         std::string approvedSVGFile) const
 {
     // received and approved are files in SVG format
-    std::string receivedAsPNG = convertToPNG(received);
-    std::string approvedAsPNG = convertToPNG(approved);
+    std::string receivedAsPNG = convertToPNG(receivedSVGFile);
+    std::string approvedAsPNG = convertToPNG(approvedSVGFile);
+
     ApprovalTests::Mac::BeyondCompareReporter beyondCompareReporter;
 
     // First show the differences in the converted .png files:
     beyondCompareReporter.report(receivedAsPNG, approvedAsPNG);
 
     // Then show the text differences in .svg files:
-    return beyondCompareReporter.report(received, approved);
+    return beyondCompareReporter.report(receivedSVGFile,
+                                        approvedSVGFile);
 }
 
 std::string SVGReporter::convertToPNG(std::string graphicsFile) const
