@@ -9,6 +9,11 @@ set(CMAKE_VERBOSE_MAKEFILE off)
 
 include(CodeCoverage)
 append_coverage_compiler_flags()
+set(COVERAGE_EXCLUDES
+        "/Applications/Xcode.app/*"
+        "/opt/local/*"
+        "third_party/*"
+        )
 
 add_subdirectory(shared_code)
 add_subdirectory(third_party)
