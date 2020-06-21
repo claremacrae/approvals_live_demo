@@ -28,7 +28,7 @@ ostream& operator<<(ostream& os, const Item& obj)
 TEST_CASE("TestOneValue", "[!hide]")
 {
     vector<Item> items;
-    items.push_back(Item("Foo", 0, 0));
+    items.push_back(Item("Wibble", 0, 0));
     GildedRose app(items);
     app.updateQuality();
     Approvals::verify(app.items[0]); // 51% line coverage
@@ -39,7 +39,7 @@ TEST_CASE("TestOneValue", "[!hide]")
  *     unknown file: error: SEH exception with code 0xc0000005 thrown in the test body.
  * 2. The "approved" file will contain this output: Note how it easily allows us to test
  *    the Item's whole content, rather than needing one test per value.
- *     name: Foo, sellIn: -1, quality: 0
+ *     name: Wibble, sellIn: -1, quality: 0
  *    i.e. the actual calculation result (new quality) is now tested
  * 3. If we are testing a class that has its own output stream operator, Approvals
  *    would use that automatically. As Item doesn't have one, we provide
@@ -50,7 +50,7 @@ TEST_CASE("TestOneValue", "[!hide]")
 TEST_CASE("TestMultipleValues", "[!hide]")
 {
     vector<Item> items;
-    items.push_back(Item("Foo", 0, 0));
+    items.push_back(Item("Wibble", 0, 0));
     items.push_back(Item("Aged Brie", 0, 0)); // Added
     GildedRose app(items);
     app.updateQuality();
@@ -63,7 +63,7 @@ TEST_CASE("TestMultipleValues", "[!hide]")
  * 3. The test output now looks like this, showing the indices of the objects
  *    after they have been updated. They don't show the initial values though.
 
-[0] = name: Foo, sellIn: -1, quality: 0
+[0] = name: Wibble, sellIn: -1, quality: 0
 [1] = name: Aged Brie, sellIn: -1, quality: 2
 
  */
@@ -82,7 +82,7 @@ Item getUpdatedItem(string name, int sellIn, int quality)
 
 TEST_CASE("VerifyCombinations", "[!hide]")
 {
-    vector<string> names{"Foo", "Aged Brie"};
+    vector<string> names{"Wibble", "Aged Brie"};
     vector<int> sellIns{0};
     vector<int> qualities{0};
 
@@ -102,7 +102,7 @@ TEST_CASE("VerifyCombinations", "[!hide]")
  * 3. The test output now looks like this, showing the indices of the objects
  *    after they have been updated. They don't show the initial values though.
 
-(Foo, 0, 0) => name: Foo, sellIn: -1, quality: 0
+(Wibble, 0, 0) => name: Wibble, sellIn: -1, quality: 0
 (Aged Brie, 0, 0) => name: Aged Brie, sellIn: -1, quality: 2
 
  */
@@ -110,7 +110,7 @@ TEST_CASE("VerifyCombinations", "[!hide]")
 TEST_CASE("VerifyMoreCombinations", "[!hide]")
 {
     vector<string> names{
-        "Foo",
+        "Wibble",
         "Aged Brie",
         "Backstage passes to a TAFKAL80ETC concert"}; // Added
     vector<int> sellIns{0};
@@ -136,7 +136,7 @@ TEST_CASE("VerifyMoreCombinations", "[!hide]")
 
 TEST_CASE("VerifyEvenMoreCombinations", "[!hide]")
 {
-    vector<string> names{"Foo",
+    vector<string> names{"Wibble",
                          "Aged Brie",
                          "Backstage passes to a TAFKAL80ETC concert",
                          "Sulfuras, Hand of Ragnaros"}; // Added
@@ -161,7 +161,7 @@ TEST_CASE("VerifyEvenMoreCombinations", "[!hide]")
 
 TEST_CASE("VerifyEvenMoreCombinationsAfterMutation", "[!hide]")
 {
-    vector<string> names{"Foo",
+    vector<string> names{"Wibble",
                          "Aged Brie",
                          "Backstage passes to a TAFKAL80ETC concert",
                          "Sulfuras, Hand of Ragnaros"};
