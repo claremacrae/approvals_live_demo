@@ -44,7 +44,7 @@ TEST_CASE("TestMultipleValues", "[!hide]")
 {
     vector<Item> items;
     items.push_back(Item("Foo", 0, 0));
-    items.push_back(Item("Aged Brie", 0, 0));
+    items.push_back(Item("Aged Brie", 0, 0)); // Added
     GildedRose app(items);
     app.updateQuality();
     Approvals::verifyAll(app.items); // 65% line coverage
@@ -102,11 +102,12 @@ TEST_CASE("VerifyCombinations", "[!hide]")
 
 TEST_CASE("VerifyMoreCombinations", "[!hide]")
 {
-    vector<string> names{"Foo",
-                         "Aged Brie",
-                         "Backstage passes to a TAFKAL80ETC concert"};
+    vector<string> names{
+        "Foo",
+        "Aged Brie",
+        "Backstage passes to a TAFKAL80ETC concert"}; // Added
     vector<int> sellIns{0};
-    vector<int> qualities{0, 1, 2};
+    vector<int> qualities{0, 1, 2}; // Added: 1, 2
 
     CombinationApprovals::verifyAllCombinations(
         [](string name, int sellIn, int quality) {
@@ -131,9 +132,9 @@ TEST_CASE("VerifyEvenMoreCombinations", "[!hide]")
     vector<string> names{"Foo",
                          "Aged Brie",
                          "Backstage passes to a TAFKAL80ETC concert",
-                         "Sulfuras, Hand of Ragnaros"};
-    vector<int> sellIns{-1, 0, 11};
-    vector<int> qualities{0, 1, 2, 49, 50};
+                         "Sulfuras, Hand of Ragnaros"}; // Added
+    vector<int> sellIns{-1, 0, 11};         // Added -1, 11
+    vector<int> qualities{0, 1, 2, 49, 50}; // Added 49. 50
 
     CombinationApprovals::verifyAllCombinations(
         [](string name, int sellIn, int quality) {
@@ -157,7 +158,7 @@ TEST_CASE("VerifyEvenMoreCombinationsAfterMutation", "[!hide]")
                          "Aged Brie",
                          "Backstage passes to a TAFKAL80ETC concert",
                          "Sulfuras, Hand of Ragnaros"};
-    vector<int> sellIns{-1, 0, 2, 6, 11};
+    vector<int> sellIns{-1, 0, 2, 6, 11}; // Added 2, 6
     vector<int> qualities{0, 1, 2, 49, 50};
 
     CombinationApprovals::verifyAllCombinations(
