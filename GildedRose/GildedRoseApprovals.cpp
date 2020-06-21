@@ -8,10 +8,12 @@ using namespace std;
 
 ostream& operator<<(ostream& os, const Item& obj)
 {
+    // clang-format off
     return os
         << "name: " << obj.name
         << ", sellIn: " << obj.sellIn
         << ", quality: " << obj.quality;
+    // clang-format on
 }
 
 TEST_CASE("TestOneValue", "[!hide]")
