@@ -182,7 +182,7 @@ function(SETUP_TARGET_FOR_COVERAGE_LCOV)
     # Show info where to find the report
     add_custom_command(TARGET ${Coverage_NAME} POST_BUILD
         COMMAND ;
-        COMMENT "Open ./${Coverage_NAME}/index.html in your browser to view the coverage report."
+        COMMENT "open ${PROJECT_BINARY_DIR}/${Coverage_NAME}/index.html in your browser to view the coverage report."
     )
 
 endfunction() # SETUP_TARGET_FOR_COVERAGE_LCOV
@@ -295,7 +295,7 @@ function(SETUP_TARGET_FOR_COVERAGE_GCOVR_HTML)
     # Show info where to find the report
     add_custom_command(TARGET ${Coverage_NAME} POST_BUILD
         COMMAND ;
-        COMMENT "Open ./${Coverage_NAME}/index.html in your browser to view the coverage report."
+        COMMENT "open ${PROJECT_BINARY_DIR}/${Coverage_NAME}/index.html in your browser to view the coverage report."
     )
 
 endfunction() # SETUP_TARGET_FOR_COVERAGE_GCOVR_HTML
