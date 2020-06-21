@@ -6,7 +6,7 @@
 using namespace ApprovalTests;
 using namespace std;
 
-// Goal: Use ApprovalTests to get to 100% line and branch coverage
+// TODO: Use ApprovalTests to get to 100% line and branch coverage
 //       of GildedRose.cc.
 //
 // For help setting up code-coverage measurements, see:
