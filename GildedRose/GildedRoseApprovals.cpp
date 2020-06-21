@@ -73,15 +73,17 @@ Item getUpdatedItem(string name, int sellIn, int quality)
 
 TEST_CASE("VerifyCombinations", "[!hide]")
 {
-    vector<string> names { "Foo", "Aged Brie" };
-    vector<int> sellIns { 0 };
-    vector<int> qualities { 0 };
+    vector<string> names{"Foo", "Aged Brie"};
+    vector<int> sellIns{0};
+    vector<int> qualities{0};
 
     CombinationApprovals::verifyAllCombinations(
-            [](string name, int sellIn, int quality) {
-                return getUpdatedItem(name, sellIn, quality);
-            },
-            names, sellIns, qualities); // 67% line coverage
+        [](string name, int sellIn, int quality) {
+            return getUpdatedItem(name, sellIn, quality);
+        },
+        names,
+        sellIns,
+        qualities); // 67% line coverage
 }
 
 /* Things to note
@@ -98,15 +100,19 @@ TEST_CASE("VerifyCombinations", "[!hide]")
 
 TEST_CASE("VerifyMoreCombinations", "[!hide]")
 {
-    vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" };
-    vector<int> sellIns { 0 };
-    vector<int> qualities { 0, 1, 2 };
+    vector<string> names{"Foo",
+                         "Aged Brie",
+                         "Backstage passes to a TAFKAL80ETC concert"};
+    vector<int> sellIns{0};
+    vector<int> qualities{0, 1, 2};
 
     CombinationApprovals::verifyAllCombinations(
-            [](string name, int sellIn, int quality) {
-                return getUpdatedItem(name, sellIn, quality);
-            },
-            names, sellIns, qualities); // 100% line coverage, 83% branch coverage
+        [](string name, int sellIn, int quality) {
+            return getUpdatedItem(name, sellIn, quality);
+        },
+        names,
+        sellIns,
+        qualities); // 100% line coverage, 83% branch coverage
 }
 
 /* Things to note
@@ -120,16 +126,20 @@ TEST_CASE("VerifyMoreCombinations", "[!hide]")
 
 TEST_CASE("VerifyEvenMoreCombinations", "[!hide]")
 {
-    vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
-                                "Sulfuras, Hand of Ragnaros"};
-    vector<int> sellIns { -1, 0, 11 };
-    vector<int> qualities { 0, 1, 2, 49, 50 };
+    vector<string> names{"Foo",
+                         "Aged Brie",
+                         "Backstage passes to a TAFKAL80ETC concert",
+                         "Sulfuras, Hand of Ragnaros"};
+    vector<int> sellIns{-1, 0, 11};
+    vector<int> qualities{0, 1, 2, 49, 50};
 
     CombinationApprovals::verifyAllCombinations(
-            [](string name, int sellIn, int quality) {
-                return getUpdatedItem(name, sellIn, quality);
-            },
-            names, sellIns, qualities); // 100% line coverage, 100% branch coverage
+        [](string name, int sellIn, int quality) {
+            return getUpdatedItem(name, sellIn, quality);
+        },
+        names,
+        sellIns,
+        qualities); // 100% line coverage, 100% branch coverage
 }
 
 /* Things to note
@@ -141,16 +151,20 @@ TEST_CASE("VerifyEvenMoreCombinations", "[!hide]")
 
 TEST_CASE("VerifyEvenMoreCombinationsAfterMutation", "[!hide]")
 {
-    vector<string> names { "Foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert",
-                                "Sulfuras, Hand of Ragnaros"};
-    vector<int> sellIns { -1, 0, 2, 6, 11 };
-    vector<int> qualities { 0, 1, 2, 49, 50 };
+    vector<string> names{"Foo",
+                         "Aged Brie",
+                         "Backstage passes to a TAFKAL80ETC concert",
+                         "Sulfuras, Hand of Ragnaros"};
+    vector<int> sellIns{-1, 0, 2, 6, 11};
+    vector<int> qualities{0, 1, 2, 49, 50};
 
     CombinationApprovals::verifyAllCombinations(
-            [](string name, int sellIn, int quality) {
-                return getUpdatedItem(name, sellIn, quality);
-            },
-            names, sellIns, qualities); // 100% line coverage, 100% branch coverage
+        [](string name, int sellIn, int quality) {
+            return getUpdatedItem(name, sellIn, quality);
+        },
+        names,
+        sellIns,
+        qualities); // 100% line coverage, 100% branch coverage
 }
 
 /* Things to note
