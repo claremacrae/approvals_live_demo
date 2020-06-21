@@ -30,7 +30,7 @@ TEST_CASE("TestOneValue", "[!hide]")
 /* Things to note
  * 1. If this is run without adding a main() for Approvals, it will give:
  *     unknown file: error: SEH exception with code 0xc0000005 thrown in the test body.
- * 2. The "approved" file will contain this output: Note how it easily allows us to test 
+ * 2. The "approved" file will contain this output: Note how it easily allows us to test
  *    the Item's whole content, rather than needing one test per value.
  *     name: Foo, sellIn: -1, quality: 0
  *    i.e. the actual calculation result (new quality) is now tested
@@ -89,7 +89,7 @@ TEST_CASE("VerifyCombinations", "[!hide]")
 }
 
 /* Things to note
- * 1. By using Approvals::verifyAllCombinations, it is easy to add many 
+ * 1. By using Approvals::verifyAllCombinations, it is easy to add many
  *    extra values to test.
  * 2. Test coverage still 67% on GildedRose.cpp, as inputs are unchanged
  * 3. The test output now looks like this, showing the indices of the objects
