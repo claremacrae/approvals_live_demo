@@ -1,7 +1,7 @@
 #include <ApprovalTests.hpp>
 #include <catch2/catch.hpp>
 
-#include "lib/GildedRose.h"
+#include "../lib/GildedRose.h"
 
 using namespace ApprovalTests;
 using namespace std;
