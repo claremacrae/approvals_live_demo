@@ -45,12 +45,12 @@ TEST_CASE("TestMultipleValues", "[!hide]")
     items.push_back(Item("Aged Brie", 0, 0));
     GildedRose app(items);
     app.updateQuality();
-    Approvals::verifyAll(app.items); // 67% line coverage
+    Approvals::verifyAll(app.items); // 65% line coverage
 }
 
 /* Things to note
  * 1. By using Approvals::verifyAll, it is easy to add extra values to test
- * 2. Test coverage up to 67% on GildedRose.cpp
+ * 2. Test coverage up to 65% on GildedRose.cpp
  * 3. The test output now looks like this, showing the indices of the objects
  *    after they have been updated. They don't show the initial values though.
 
@@ -83,7 +83,7 @@ TEST_CASE("VerifyCombinations", "[!hide]")
         },
         names,
         sellIns,
-        qualities); // 67% line coverage
+        qualities); // 65% line coverage
 }
 
 /* Things to note
@@ -112,7 +112,7 @@ TEST_CASE("VerifyMoreCombinations", "[!hide]")
         },
         names,
         sellIns,
-        qualities); // 100% line coverage, 83% branch coverage
+        qualities); // 100% line coverage, 75% branch coverage
 }
 
 /* Things to note
