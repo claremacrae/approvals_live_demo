@@ -1,4 +1,4 @@
-set(EXE_NAME GildedRose)
+set(EXE_NAME 02GildedRose)
 
 set(CMAKE_CXX_STANDARD 17)
 add_executable(${EXE_NAME}
