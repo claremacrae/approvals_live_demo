@@ -5,7 +5,7 @@
 TEST_CASE( "Wibble" )
 {
     vector<Item> items;
-    items.push_back( Item( "Wibble", 0, 0 ) );
+    items.emplace_back( "Wibble", 0, 0 );
     GildedRose app( items );
     app.updateQuality();
     CHECK( "Wibble" == app.items[0].name );
@@ -21,7 +21,7 @@ TEST_CASE( "Wibble" )
 TEST_CASE( "TestUpdateQuality" )
 {
     vector<Item> items;
-    items.push_back( Item( "Wibble", 1, 1 ) );
+    items.emplace_back( "Wibble", 1, 1 );
     GildedRose app( items );
     app.updateQuality();
     CHECK( "Wibble" == app.items[0].name );
