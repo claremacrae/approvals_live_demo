@@ -7,8 +7,6 @@ A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kat
 * Turning on line code coverage
 * Turning on branch code coverage
 * std::ostream& operator<<()
-* Approvals::verify()
-* Approvals::verifyAll()
 * CombinationApprovals::verifyAllCombinations()
 * Approvals::useApprovalsSubdirectory()
 

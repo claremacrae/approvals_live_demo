@@ -13,42 +13,12 @@ using namespace ApprovalTests;
 /* TODO: Use ApprovalTests to get to 100% line and branch coverage
          of GildedRose.cc.
 
+         Try to do better than:
+           Approvals::verify( Item );
+           Approvals::verifyAll( std::vector<Item> );
+
    NOTE: All tests are disabled initially, with Catch's "[!hide]" tag
 */
-
-TEST_CASE( "TestOneValue", "[!hide]" )
-{
-    std::vector<Item> items;
-    items.emplace_back( Item( "Wibble", 0, 0 ) );
-    GildedRose app( items );
-    app.updateQuality();
-    // Uses:
-    //  std::ostream& operator<<( std::ostream& os, const Item& obj );
-    Approvals::verify( app.items[0] ); // 51% line coverage
-}
-
-/* Approved file:
-
-name: Wibble, sellIn: -1, quality: 0
-
- */
-
-TEST_CASE( "TestMultipleValues", "[!hide]" )
-{
-    std::vector<Item> items;
-    items.emplace_back( Item( "Wibble", 0, 0 ) );
-    items.emplace_back( Item( "Aged Brie", 0, 0 ) ); // Added
-    GildedRose app( items );
-    app.updateQuality();
-    Approvals::verifyAll( app.items ); // 65% line coverage
-}
-
-/* Approved file:
-
-[0] = name: Wibble, sellIn: -1, quality: 0
-[1] = name: Aged Brie, sellIn: -1, quality: 2
-
- */
 
 TEST_CASE( "VerifyMoreCombinations", "[!hide]" )
 {
