@@ -2,6 +2,7 @@
 #include <catch2/catch.hpp>
 
 #include "../lib/GildedRose.h"
+#include "TestHelpers.h"
 
 using namespace ApprovalTests;
 
@@ -15,15 +16,6 @@ using namespace ApprovalTests;
    NOTE: All tests are disabled initially, with Catch's "[!hide]" tag
 */
 
-std::ostream& operator<<( std::ostream& os, const Item& obj )
-{
-    // clang-format off
-    return os
-        << "name: " << obj.name
-        << ", sellIn: " << obj.sellIn
-        << ", quality: " << obj.quality;
-    // clang-format on
-}
 
 TEST_CASE( "TestOneValue", "[!hide]" )
 {
@@ -67,20 +59,6 @@ TEST_CASE( "TestMultipleValues", "[!hide]" )
 [1] = name: Aged Brie, sellIn: -1, quality: 2
 
  */
-
-// Helper function to reduce boilerplate code
-Item getUpdatedItem( const std::string& name,
-                     int sellIn,
-                     int quality )
-{
-    std::vector<Item> items;
-    items.emplace_back( Item( name, sellIn, quality ) );
-    GildedRose app( items );
-
-    app.updateQuality();
-
-    return app.items[0];
-}
 
 TEST_CASE( "VerifyCombinations", "[!hide]" )
 {
