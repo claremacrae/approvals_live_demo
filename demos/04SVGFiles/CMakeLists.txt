@@ -1,4 +1,4 @@
-set(EXE_NAME SVGFiles)
+set(EXE_NAME 04SVGFiles)
 set(CMAKE_CXX_STANDARD 17)
 add_executable(${EXE_NAME}
         main.cpp
