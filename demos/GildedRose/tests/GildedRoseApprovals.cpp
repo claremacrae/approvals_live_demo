@@ -28,7 +28,7 @@ std::ostream& operator<<( std::ostream& os, const Item& obj )
 TEST_CASE( "TestOneValue", "[!hide]" )
 {
     std::vector<Item> items;
-    items.push_back( Item( "Wibble", 0, 0 ) );
+    items.emplace_back( Item( "Wibble", 0, 0 ) );
     GildedRose app( items );
     app.updateQuality();
     Approvals::verify( app.items[0] ); // 51% line coverage
@@ -50,8 +50,8 @@ TEST_CASE( "TestOneValue", "[!hide]" )
 TEST_CASE( "TestMultipleValues", "[!hide]" )
 {
     std::vector<Item> items;
-    items.push_back( Item( "Wibble", 0, 0 ) );
-    items.push_back( Item( "Aged Brie", 0, 0 ) ); // Added
+    items.emplace_back( Item( "Wibble", 0, 0 ) );
+    items.emplace_back( Item( "Aged Brie", 0, 0 ) ); // Added
     GildedRose app( items );
     app.updateQuality();
     Approvals::verifyAll( app.items ); // 65% line coverage
@@ -72,7 +72,7 @@ TEST_CASE( "TestMultipleValues", "[!hide]" )
 Item getUpdatedItem( std::string name, int sellIn, int quality )
 {
     std::vector<Item> items;
-    items.push_back( Item( name, sellIn, quality ) );
+    items.emplace_back( Item( name, sellIn, quality ) );
     GildedRose app( items );
 
     app.updateQuality();
