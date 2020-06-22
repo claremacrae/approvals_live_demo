@@ -10,8 +10,9 @@
 
 using namespace ApprovalTests;
 
-/* TODO: Use ApprovalTests to get to 100% line and branch coverage
-         of GildedRose.cc.
+// TODO 1: Measure the LINE coverage in GildedRose.cc achieved in GildedRoseTest.cpp
+
+/* TODO 2: Use ApprovalTests to get to 100% LINE coverage of GildedRose.cc.
 
          Try to do better than:
            Approvals::verify( Item );
@@ -35,7 +36,7 @@ TEST_CASE( "VerifyMoreCombinations", "[!hide]" )
         },
         names,
         sellIns,
-        qualities ); // 100% line coverage, 75% branch coverage
+        qualities ); // 100% line coverage
 }
 
 /* Approved file starts with:
@@ -46,6 +47,11 @@ TEST_CASE( "VerifyMoreCombinations", "[!hide]" )
 (Aged Brie, 0, 0) => name: Aged Brie, sellIn: -1, quality: 2
 
  */
+
+// TODO 3: Understand the branch coverage of GildedRose.cc.
+
+// TODO 4: Use ApprovalTests to get from 75% to 100% BRANCH coverage
+//         in GildedRose.cc.
 
 TEST_CASE( "VerifyEvenMoreCombinations", "[!hide]" )
 {
