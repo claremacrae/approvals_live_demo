@@ -4,8 +4,10 @@ This intentionally trivial example shows:
 
 ## Starting Point
 
-* Traditional unit test
-* How tests are sometimes written
+* CHECK() = traditional Catch2 unit test
+* Scenario
+    * Perhaps test is being written after feature was done
+    * Or perhaps you are adding test for legacy/untested code
 * Inputs and outputs from tests are both in the code
 
 ## main.cpp
