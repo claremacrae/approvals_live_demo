@@ -5,10 +5,10 @@
 
 namespace FileUtilities
 {
-    std::string readFileThrowIfMissing(const std::string& filePath);
+    std::string readFileThrowIfMissing( const std::string& filePath );
 
-    void writeToFile(const std::string& filePath,
-                     const std::string& content);
+    void writeToFile( const std::string& filePath,
+                      const std::string& content );
 }
 
 #endif //DEMO_FILEUTILITIES_H

@@ -4,4 +4,4 @@
 using namespace ApprovalTests;
 
 auto directoryDisposer =
-    Approvals::useApprovalsSubdirectory("approval_tests");
+    Approvals::useApprovalsSubdirectory( "approval_tests" );

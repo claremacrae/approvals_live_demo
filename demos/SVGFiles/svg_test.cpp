@@ -5,9 +5,9 @@
 
 using namespace ApprovalTests;
 
-TEST_CASE("SVG Test 1")
+TEST_CASE( "SVG Test 1" )
 {
-    SVGDrawing drawing("drawing1.svg");
+    SVGDrawing drawing( "drawing1.svg" );
     // TODO 1 Test the complete content of this file
 }
 

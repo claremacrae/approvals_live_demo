@@ -2,13 +2,13 @@
 
 #include "../lib/GildedRose.h"
 
-TEST_CASE("Wibble")
+TEST_CASE( "Wibble" )
 {
     vector<Item> items;
-    items.push_back(Item("Wibble", 0, 0));
-    GildedRose app(items);
+    items.push_back( Item( "Wibble", 0, 0 ) );
+    GildedRose app( items );
     app.updateQuality();
-    CHECK("Wibble" == app.items[0].name);
+    CHECK( "Wibble" == app.items[0].name );
 }
 
 /*
@@ -18,15 +18,15 @@ TEST_CASE("Wibble")
  * - The actual calculation result (new quality) is not tested
  */
 
-TEST_CASE("TestUpdateQuality")
+TEST_CASE( "TestUpdateQuality" )
 {
     vector<Item> items;
-    items.push_back(Item("Wibble", 1, 1));
-    GildedRose app(items);
+    items.push_back( Item( "Wibble", 1, 1 ) );
+    GildedRose app( items );
     app.updateQuality();
-    CHECK("Wibble" == app.items[0].name);
-    CHECK(0 == app.items[0].sellIn);
-    CHECK(0 == app.items[0].quality);
+    CHECK( "Wibble" == app.items[0].name );
+    CHECK( 0 == app.items[0].sellIn );
+    CHECK( 0 == app.items[0].quality );
 }
 
 /*

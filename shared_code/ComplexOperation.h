@@ -7,7 +7,7 @@
 class ComplexOperation
 {
 public:
-    void doStuff(std::ostream& stream);
+    void doStuff( std::ostream& stream );
 };
 
 #endif //DEMO_COMPLEXOPERATION_H

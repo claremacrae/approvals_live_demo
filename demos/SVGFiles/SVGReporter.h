@@ -6,10 +6,10 @@
 class SVGReporter : public ApprovalTests::Reporter
 {
 public:
-    bool report(std::string receivedSVGFile,
-                std::string approvedSVGFile) const override;
+    bool report( std::string receivedSVGFile,
+                 std::string approvedSVGFile ) const override;
 
-    std::string convertToPNG(std::string graphicsFile) const;
+    std::string convertToPNG( std::string graphicsFile ) const;
 };
 
 #endif //DEMO_SVGREPORTER_H

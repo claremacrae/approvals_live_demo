@@ -4,7 +4,7 @@
 // TODO 1 Fix this test
 // TODO 2 Convert this to an approval test
 
-TEST_CASE("First Test")
+TEST_CASE( "First Test" )
 {
-    CHECK(HelloApprovals::helloApprovals() == "?");
+    CHECK( HelloApprovals::helloApprovals() == "?" );
 }

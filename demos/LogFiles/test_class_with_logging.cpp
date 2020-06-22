@@ -6,8 +6,8 @@
 
 // TODO Write a test for this
 
-TEST_CASE("Test ComplexOperation Log")
+TEST_CASE( "Test ComplexOperation Log" )
 {
     ComplexOperation stuff;
-    stuff.doStuff(std::cout);
+    stuff.doStuff( std::cout );
 }

@@ -8,7 +8,7 @@ class SVGDrawing
 public:
     // File names are in resources sub-directory, relative to the
     // location of this source code.
-    explicit SVGDrawing(const std::string& source_svg_file);
+    explicit SVGDrawing( const std::string& source_svg_file );
 
     // Return the SVG text from the file
     std::string content() const;
