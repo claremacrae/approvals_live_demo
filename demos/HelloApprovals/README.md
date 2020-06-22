@@ -6,6 +6,7 @@ This intentionally trivial example shows:
 
 * Traditional unit test
 * How tests are sometimes written
+* Inputs and outputs from tests are both in the code
 
 ## main.cpp
 
@@ -16,9 +17,11 @@ This intentionally trivial example shows:
 
 ## first_test.cpp
 
-* Automated naming of output files
 * Reporter
     * Diff tool popping if there are differences to show
     * No diff tool popping up if test passes
 * Separation of test code and data
 * Namespace ApprovalTests
+* Automated naming of output files
+    * approved.txt
+    * received.txt
