@@ -19,6 +19,8 @@ TEST_CASE( "TestOneValue", "[!hide]" )
     items.emplace_back( Item( "Wibble", 0, 0 ) );
     GildedRose app( items );
     app.updateQuality();
+    // Uses:
+    //  std::ostream& operator<<( std::ostream& os, const Item& obj );
     Approvals::verify( app.items[0] ); // 51% line coverage
 }
 
