@@ -69,7 +69,9 @@ TEST_CASE( "TestMultipleValues", "[!hide]" )
  */
 
 // Helper function to reduce boilerplate code
-Item getUpdatedItem( std::string name, int sellIn, int quality )
+Item getUpdatedItem( const std::string& name,
+                     int sellIn,
+                     int quality )
 {
     std::vector<Item> items;
     items.emplace_back( Item( name, sellIn, quality ) );
@@ -87,7 +89,7 @@ TEST_CASE( "VerifyCombinations", "[!hide]" )
     std::vector<int> qualities{ 0 };
 
     CombinationApprovals::verifyAllCombinations(
-        []( std::string name, int sellIn, int quality ) {
+        []( const std::string& name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
@@ -117,7 +119,7 @@ TEST_CASE( "VerifyMoreCombinations", "[!hide]" )
     std::vector<int> qualities{ 0, 1, 2 }; // Added: 1, 2
 
     CombinationApprovals::verifyAllCombinations(
-        []( std::string name, int sellIn, int quality ) {
+        []( const std::string& name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
@@ -145,7 +147,7 @@ TEST_CASE( "VerifyEvenMoreCombinations", "[!hide]" )
     std::vector<int> qualities{ 0, 1, 2, 49, 50 }; // Added 49. 50
 
     CombinationApprovals::verifyAllCombinations(
-        []( std::string name, int sellIn, int quality ) {
+        []( const std::string& name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
@@ -171,7 +173,7 @@ TEST_CASE( "VerifyEvenMoreCombinationsAfterMutation", "[!hide]" )
     std::vector<int> qualities{ 0, 1, 2, 49, 50 };
 
     CombinationApprovals::verifyAllCombinations(
-        []( std::string name, int sellIn, int quality ) {
+        []( const std::string& name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
