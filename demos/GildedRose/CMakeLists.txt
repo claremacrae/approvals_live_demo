@@ -9,6 +9,7 @@ add_executable(${EXE_NAME}
         tests/GildedRoseApprovals.cpp
         tests/TestHelpers.cpp
         tests/TestHelpers.h
+        tests/detailed_tests/GildedRoseApprovalsAllSteps.cpp
         )
 target_link_libraries(${EXE_NAME}
         ApprovalTests::ApprovalTests
