@@ -4,7 +4,7 @@
 
 TEST_CASE( "Wibble" )
 {
-    vector<Item> items;
+    std::vector<Item> items;
     items.emplace_back( "Wibble", 0, 0 );
     GildedRose app( items );
     app.updateQuality();
@@ -20,7 +20,7 @@ TEST_CASE( "Wibble" )
 
 TEST_CASE( "TestUpdateQuality" )
 {
-    vector<Item> items;
+    std::vector<Item> items;
     items.emplace_back( "Wibble", 1, 1 );
     GildedRose app( items );
     app.updateQuality();

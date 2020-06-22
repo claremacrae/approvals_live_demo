@@ -4,7 +4,6 @@
 #include "../lib/GildedRose.h"
 
 using namespace ApprovalTests;
-using namespace std;
 
 /* TODO: Use ApprovalTests to get to 100% line and branch coverage
          of GildedRose.cc.
@@ -16,7 +15,7 @@ using namespace std;
    NOTE: All tests are disabled initially, with Catch's "[!hide]" tag
 */
 
-ostream& operator<<( ostream& os, const Item& obj )
+std::ostream& operator<<( std::ostream& os, const Item& obj )
 {
     // clang-format off
     return os
@@ -28,7 +27,7 @@ ostream& operator<<( ostream& os, const Item& obj )
 
 TEST_CASE( "TestOneValue", "[!hide]" )
 {
-    vector<Item> items;
+    std::vector<Item> items;
     items.push_back( Item( "Wibble", 0, 0 ) );
     GildedRose app( items );
     app.updateQuality();
@@ -50,7 +49,7 @@ TEST_CASE( "TestOneValue", "[!hide]" )
 
 TEST_CASE( "TestMultipleValues", "[!hide]" )
 {
-    vector<Item> items;
+    std::vector<Item> items;
     items.push_back( Item( "Wibble", 0, 0 ) );
     items.push_back( Item( "Aged Brie", 0, 0 ) ); // Added
     GildedRose app( items );
@@ -70,9 +69,9 @@ TEST_CASE( "TestMultipleValues", "[!hide]" )
  */
 
 // Helper function to reduce boilerplate code
-Item getUpdatedItem( string name, int sellIn, int quality )
+Item getUpdatedItem( std::string name, int sellIn, int quality )
 {
-    vector<Item> items;
+    std::vector<Item> items;
     items.push_back( Item( name, sellIn, quality ) );
     GildedRose app( items );
 
@@ -83,12 +82,12 @@ Item getUpdatedItem( string name, int sellIn, int quality )
 
 TEST_CASE( "VerifyCombinations", "[!hide]" )
 {
-    vector<string> names{ "Wibble", "Aged Brie" };
-    vector<int> sellIns{ 0 };
-    vector<int> qualities{ 0 };
+    std::vector<std::string> names{ "Wibble", "Aged Brie" };
+    std::vector<int> sellIns{ 0 };
+    std::vector<int> qualities{ 0 };
 
     CombinationApprovals::verifyAllCombinations(
-        []( string name, int sellIn, int quality ) {
+        []( std::string name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
@@ -110,15 +109,15 @@ TEST_CASE( "VerifyCombinations", "[!hide]" )
 
 TEST_CASE( "VerifyMoreCombinations", "[!hide]" )
 {
-    vector<string> names{
+    std::vector<std::string> names{
         "Wibble",
         "Aged Brie",
         "Backstage passes to a TAFKAL80ETC concert" }; // Added
-    vector<int> sellIns{ 0 };
-    vector<int> qualities{ 0, 1, 2 }; // Added: 1, 2
+    std::vector<int> sellIns{ 0 };
+    std::vector<int> qualities{ 0, 1, 2 }; // Added: 1, 2
 
     CombinationApprovals::verifyAllCombinations(
-        []( string name, int sellIn, int quality ) {
+        []( std::string name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
@@ -137,15 +136,16 @@ TEST_CASE( "VerifyMoreCombinations", "[!hide]" )
 
 TEST_CASE( "VerifyEvenMoreCombinations", "[!hide]" )
 {
-    vector<string> names{ "Wibble",
-                          "Aged Brie",
-                          "Backstage passes to a TAFKAL80ETC concert",
-                          "Sulfuras, Hand of Ragnaros" }; // Added
-    vector<int> sellIns{ -1, 0, 11 };         // Added -1, 11
-    vector<int> qualities{ 0, 1, 2, 49, 50 }; // Added 49. 50
+    std::vector<std::string> names{
+        "Wibble",
+        "Aged Brie",
+        "Backstage passes to a TAFKAL80ETC concert",
+        "Sulfuras, Hand of Ragnaros" };            // Added
+    std::vector<int> sellIns{ -1, 0, 11 };         // Added -1, 11
+    std::vector<int> qualities{ 0, 1, 2, 49, 50 }; // Added 49. 50
 
     CombinationApprovals::verifyAllCombinations(
-        []( string name, int sellIn, int quality ) {
+        []( std::string name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
@@ -162,15 +162,16 @@ TEST_CASE( "VerifyEvenMoreCombinations", "[!hide]" )
 
 TEST_CASE( "VerifyEvenMoreCombinationsAfterMutation", "[!hide]" )
 {
-    vector<string> names{ "Wibble",
-                          "Aged Brie",
-                          "Backstage passes to a TAFKAL80ETC concert",
-                          "Sulfuras, Hand of Ragnaros" };
-    vector<int> sellIns{ -1, 0, 2, 6, 11 }; // Added 2, 6
-    vector<int> qualities{ 0, 1, 2, 49, 50 };
+    std::vector<std::string> names{
+        "Wibble",
+        "Aged Brie",
+        "Backstage passes to a TAFKAL80ETC concert",
+        "Sulfuras, Hand of Ragnaros" };
+    std::vector<int> sellIns{ -1, 0, 2, 6, 11 }; // Added 2, 6
+    std::vector<int> qualities{ 0, 1, 2, 49, 50 };
 
     CombinationApprovals::verifyAllCombinations(
-        []( string name, int sellIn, int quality ) {
+        []( std::string name, int sellIn, int quality ) {
             return getUpdatedItem( name, sellIn, quality );
         },
         names,
