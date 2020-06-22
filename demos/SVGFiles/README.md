@@ -6,7 +6,7 @@
     * Options have a fluent interface - chain steps together
 * Try BeyondCompare reporter
 * Recommend creating `verifyYourThing()` to encapsulate and re-use tests
-* And add Options() argument to your verify methods
+* And add `const Options& options = Options()` argument to your verify functions
 
 ## Time passes - maintenance done
 
