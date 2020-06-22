@@ -7,6 +7,7 @@ class HelloApprovals
 {
 public:
     static std::string helloApprovals();
+    static std::string helloPoetry( const std::string& language );
 };
 
 #endif //DEMO_HELLOAPPROVALS_H
