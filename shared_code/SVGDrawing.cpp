@@ -26,3 +26,8 @@ std::string SVGDrawing::content() const
     }
     return content;
 }
+
+SVGDrawing createDrawing( const std::string& source_svg_file )
+{
+    return SVGDrawing( source_svg_file );
+}

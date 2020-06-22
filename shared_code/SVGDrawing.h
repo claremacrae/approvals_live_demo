@@ -17,4 +17,6 @@ private:
     std::string m_source_svg_file;
 };
 
+SVGDrawing createDrawing( const std::string& source_svg_file );
+
 #endif //DEMO_SVGDRAWING_H
