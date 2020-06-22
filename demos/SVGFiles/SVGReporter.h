@@ -9,6 +9,7 @@ public:
     bool report( std::string receivedSVGFile,
                  std::string approvedSVGFile ) const override;
 
+    // Return the name of the saved .png file
     std::string convertToPNG( std::string graphicsFile ) const;
 };
 
