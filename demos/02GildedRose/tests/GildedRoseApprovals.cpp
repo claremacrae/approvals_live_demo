@@ -2,6 +2,10 @@
 #include <catch2/catch.hpp>
 
 #include "../lib/GildedRose.h"
+
+// TestHelpers.h provides:
+//  1. std::ostream& operator<<( std::ostream& os, const Item& obj );
+//  2. Item getUpdatedItem( const std::string& name, int sellIn, int quality );
 #include "TestHelpers.h"
 
 using namespace ApprovalTests;
@@ -11,7 +15,6 @@ using namespace ApprovalTests;
 
    NOTE: All tests are disabled initially, with Catch's "[!hide]" tag
 */
-
 
 TEST_CASE( "TestOneValue", "[!hide]" )
 {
