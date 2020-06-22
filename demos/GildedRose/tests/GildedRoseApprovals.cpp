@@ -9,10 +9,6 @@ using namespace ApprovalTests;
 /* TODO: Use ApprovalTests to get to 100% line and branch coverage
          of GildedRose.cc.
 
-   For help setting up code-coverage measurements, see:
-    * https://github.com/claremacrae/talks/blob/main/HowTos/Set_up_Code_Coverage_on_Windows.md
-    * https://github.com/claremacrae/talks/blob/main/HowTos/Set_up_Code_Coverage_on_macOS.md
-
    NOTE: All tests are disabled initially, with Catch's "[!hide]" tag
 */
 
