@@ -2,9 +2,15 @@
 
 A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/cpp).
 
+## Features used in demo
+
+* Turning on line code coverage
+* Turning on branch code coverage
+* std::ostream& operator<<()
 * Approvals::verify()
 * Approvals::verifyAll()
 * CombinationApprovals::verifyAllCombinations()
+* Approvals::useApprovalsSubdirectory()
 
 ## Takeaways
 
