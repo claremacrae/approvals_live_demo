@@ -4,8 +4,12 @@ A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kat
 
 ## Features used in demo
 
-* Turning on line code coverage
-* Turning on branch code coverage
+* Line coverage
+    * Turning on line code coverage
+    * Viewing line code coverage in CLion
+* Branch/condition coverage
+    * Collecting branch code coverage
+    * Viewing branch code coverage
 * std::ostream& operator<<()
 * CombinationApprovals::verifyAllCombinations()
 * Approvals::useApprovalsSubdirectory()
