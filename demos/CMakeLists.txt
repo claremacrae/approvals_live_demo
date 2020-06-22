@@ -1,4 +1,4 @@
 add_subdirectory(01HelloApprovals)
 add_subdirectory(SVGFiles)
 add_subdirectory(02GildedRose)
-add_subdirectory(LogFiles)
+add_subdirectory(03LogFiles)

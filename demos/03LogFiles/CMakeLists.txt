@@ -1,4 +1,4 @@
-set(EXE_NAME LogFiles)
+set(EXE_NAME 03LogFiles)
 set(CMAKE_CXX_STANDARD 17)
 add_executable(${EXE_NAME}
         main.cpp
