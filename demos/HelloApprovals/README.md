@@ -2,6 +2,11 @@
 
 This intentionally trivial example shows:
 
+## Starting Point
+
+* Traditional unit test
+* How tests are sometimes written
+
 ## main.cpp
 
 * Help messages (misconfigured main) rather than error messages
