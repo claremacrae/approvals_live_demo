@@ -19,7 +19,7 @@ using namespace ApprovalTests;
            Approvals::verifyAll( std::vector<Item> );
 */
 
-//TEST_CASE( "VerifyMoreCombinations" )
+//TEST_CASE( "VerifyCombinations" )
 //{
 //    std::vector<std::string> names{
 //        "Wibble",
@@ -51,7 +51,7 @@ using namespace ApprovalTests;
 // TODO 4: Use ApprovalTests to get from 75% to 100% BRANCH coverage
 //         in GildedRose.cc.
 
-//TEST_CASE( "VerifyEvenMoreCombinations" )
+//TEST_CASE( "VerifyMoreCombinations" )
 //{
 //    std::vector<std::string> names{
 //        "Wibble",
