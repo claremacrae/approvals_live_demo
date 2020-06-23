@@ -10,11 +10,15 @@ TEST_CASE( "helloApprovals" )
 
 // TODO 2 Test HelloApprovals::helloPoetry("Vogon")
 
-//TEST_CASE( "helloPoetry" )
-//{
-//    CHECK( HelloApprovals::helloPoetry("Vogon") == "?" );
-//}
+/*
+TEST_CASE( "helloPoetry" )
+{
+    CHECK( HelloApprovals::helloPoetry("Vogon") == "?" );
+}
+*/
 
-// https://github.com/approvals/ApprovalTests.cpp/releases
-// https://github.com/approvals/ApprovalTests.cpp.StarterProject
-// https://conan.io/center/approvaltests.cpp/8.2.0/
+/*
+ https://github.com/approvals/ApprovalTests.cpp/releases
+ https://github.com/approvals/ApprovalTests.cpp.StarterProject
+ https://conan.io/center/approvaltests.cpp/8.2.0/
+*/
