@@ -2,11 +2,15 @@
 #include <catch2/catch.hpp>
 
 // TODO 1 Run and then fix this test
-// TODO 2 Convert this to an approval test
 
 TEST_CASE( "helloApprovals" )
 {
     CHECK( HelloApprovals::helloApprovals() == "?" );
 }
 
-// TODO 3 Test HelloApprovals::helloPoetry("Vogon")
+// TODO 2 Test HelloApprovals::helloPoetry("Vogon")
+
+//TEST_CASE( "helloPoetry" )
+//{
+//    CHECK( HelloApprovals::helloPoetry("Vogon") == "?" );
+//}
