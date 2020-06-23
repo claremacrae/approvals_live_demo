@@ -12,9 +12,10 @@ bool SVGReporter::report( std::string receivedSVGFile,
     // First show the differences in the converted .png files:
     beyondCompareReporter.report( receivedAsPNG, approvedAsPNG );
 
-    // Then show the text differences in .svg files:
-    return beyondCompareReporter.report( receivedSVGFile,
-                                         approvedSVGFile );
+    // Then show the text differences in .svg files,
+    // in the default reporter:
+    return ApprovalTests::DiffReporter().report( receivedSVGFile,
+                                                 approvedSVGFile );
 }
 
 std::string
