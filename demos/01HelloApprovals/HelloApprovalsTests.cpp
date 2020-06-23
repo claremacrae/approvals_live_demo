@@ -14,3 +14,7 @@ TEST_CASE( "helloApprovals" )
 //{
 //    CHECK( HelloApprovals::helloPoetry("Vogon") == "?" );
 //}
+
+// https://github.com/approvals/ApprovalTests.cpp/releases
+// https://github.com/approvals/ApprovalTests.cpp.StarterProject
+// https://conan.io/center/approvaltests.cpp/8.2.0/
