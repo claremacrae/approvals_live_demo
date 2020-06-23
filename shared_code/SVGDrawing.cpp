@@ -18,7 +18,7 @@ std::string SVGDrawing::content() const
     std::string content =
         FileUtilities::readFileThrowIfMissing( svgFile );
 
-    if ( false )
+    if ( true )
     {
         // Hack to break the output, to demo test failure
         content = StringUtilities::replaceAll(
