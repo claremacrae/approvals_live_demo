@@ -26,8 +26,8 @@ TEST_CASE( "TestOneValue2", "[!hide]" )
 }
 
 /* Things to note
- * 1. If this is run without adding a main() for Approvals, it will give:
- *     unknown file: error: SEH exception with code 0xc0000005 thrown in the test body.
+ * 1. If this is run without adding a main() for Approvals, it will give
+ *    a meaningful help message explaining what to do.
  * 2. The "approved" file will contain this output: Note how it easily allows us to test
  *    the Item's whole content, rather than needing one test per value.
  *     name: Wibble, sellIn: -1, quality: 0
