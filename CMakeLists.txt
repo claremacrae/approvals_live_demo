@@ -14,7 +14,7 @@ set(CMAKE_VERBOSE_MAKEFILE off)
 #   1 turn COLLECT_CODE_COVERAGE to FALSE
 #   2 build and run the tests
 #   3 turn COLLECT_CODE_COVERAGE back to TRUE
-set(COLLECT_CODE_COVERAGE TRUE)
+set(COLLECT_CODE_COVERAGE FALSE)
 if (COLLECT_CODE_COVERAGE)
     include(CodeCoverage)
     append_coverage_compiler_flags()
