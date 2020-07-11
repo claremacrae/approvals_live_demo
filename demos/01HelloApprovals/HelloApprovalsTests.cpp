@@ -20,5 +20,5 @@ TEST_CASE( "helloPoetry" )
 /*
  https://github.com/approvals/ApprovalTests.cpp/releases
  https://github.com/approvals/ApprovalTests.cpp.StarterProject
- https://conan.io/center/approvaltests.cpp/8.2.0/
+ https://conan.io/center/approvaltests.cpp/10.1.1/
 */
