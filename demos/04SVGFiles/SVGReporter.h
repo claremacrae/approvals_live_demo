@@ -10,7 +10,7 @@ public:
                  std::string approvedSVGFile ) const override;
 
     // Return the name of the saved .png file
-    std::string convertToPNG( std::string graphicsFile ) const;
+    std::string convertToPNG( std::string SVGFile ) const;
 };
 
 #endif //DEMO_SVGREPORTER_H

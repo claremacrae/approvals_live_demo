@@ -18,10 +18,9 @@ bool SVGReporter::report( std::string receivedSVGFile,
                                                  approvedSVGFile );
 }
 
-std::string
-SVGReporter::convertToPNG( std::string graphicsFile ) const
+std::string SVGReporter::convertToPNG( std::string SVGFile ) const
 {
-    std::filesystem::path inputPath( graphicsFile );
+    std::filesystem::path inputPath( SVGFile );
     std::string extension = inputPath.extension();
     auto outputPath = inputPath;
     outputPath.replace_extension( "png" );
