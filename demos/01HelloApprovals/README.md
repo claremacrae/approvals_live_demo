@@ -17,7 +17,7 @@ This intentionally trivial example shows:
 * Setting up your main
 * Which test frameworks are supported
 
-## first_test.cpp
+## HelloApprovalsTests.cpp
 
 * Reporter
     * Diff tool popping if there are differences to show
