@@ -1,4 +1,4 @@
-# GildedRose
+# 2 GildedRose
 
 A worked example of the [cpp version of Emily Bache's GildedRose Refactoring Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/cpp).
 
