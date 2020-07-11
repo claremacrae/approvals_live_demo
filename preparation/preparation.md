@@ -17,6 +17,7 @@
 * Set up the IDE
     * Hide panels
     * Set font size
+    * Run -> Hide Coverage
 * First demo
     * Set target to `01HelloApprovals`
     * Open `demos/01HelloApprovals/HelloApprovalsTests.cpp`
