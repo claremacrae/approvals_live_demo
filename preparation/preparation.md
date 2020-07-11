@@ -14,3 +14,10 @@
     * Make sure `COLLECT_CODE_COVERAGE` is FALSE in top-level CMakeLists.txt
     * Build the whole project
     * Run `setup_for_demo.sh`
+* Set up the IDE
+    * Hide panels
+    * Set font size
+* First demo
+    * Set target to `01HelloApprovals`
+    * Open `demos/01HelloApprovals/HelloApprovalsTests.cpp`
+    * Collapse the block-code-comments
