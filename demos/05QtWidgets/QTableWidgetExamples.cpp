@@ -5,8 +5,8 @@ namespace QTableWidgetExamples
     QStringList getColumnTitles( const int columns );
     void populateTable( QTableWidget& tableWidget )
     {
-        const int rows = 2;
-        const int columns = 3;
+        const int rows = 300;
+        const int columns = 16;
         tableWidget.setRowCount( rows );
         tableWidget.setColumnCount( columns );
         tableWidget.setHorizontalHeaderLabels(
