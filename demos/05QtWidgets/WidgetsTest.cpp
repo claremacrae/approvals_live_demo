@@ -7,13 +7,6 @@
 #include "QImageExamples.h"
 #include "QTableWidgetExamples.h"
 
-TEST_CASE( "It approves a QImage" )
-{
-    auto color = "#800080";
-    QImage image = QImageExamples::createImage( color );
-    ApprovalTestsQt::verifyQImage( image );
-}
-
 TEST_CASE( "It approves a QTableWidget" )
 {
     // A note on naming: QTableWidget is a concrete class that implements
@@ -23,4 +16,11 @@ TEST_CASE( "It approves a QTableWidget" )
     QTableWidget tableWidget;
     QTableWidgetExamples::populateTable( tableWidget );
     ApprovalTestsQt::verifyQTableView( tableWidget );
+}
+
+TEST_CASE( "It approves a QImage" )
+{
+    auto color = "#800080";
+    QImage image = QImageExamples::createImage( color );
+    ApprovalTestsQt::verifyQImage( image );
 }
