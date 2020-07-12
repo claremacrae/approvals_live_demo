@@ -31,11 +31,9 @@ namespace
 
 TEST_CASE( "It approves a QImage" )
 {
-    // begin-snippet: verify_qimage
     QImage image( 10, 20, QImage::Format_RGB32 );
     image.fill( Qt::red );
     ApprovalTestsQt::verifyQImage( image );
-    // end-snippet
 }
 
 TEST_CASE( "It approves a QTableWidget" )
@@ -44,9 +42,7 @@ TEST_CASE( "It approves a QTableWidget" )
     // the more general QTableView. Here we create a QTableWidget,
     // for convenience.
 
-    // begin-snippet: verify_table_view
     QTableWidget tableWidget;
     populateTable( tableWidget );
     ApprovalTestsQt::verifyQTableView( tableWidget );
-    // end-snippet
 }
