@@ -1,14 +1,11 @@
 #include <catch2/catch.hpp>
+#include <ApprovalTestsQt.hpp>
+
 #include <QImage>
 #include <QTableWidget>
-#include "ApprovalTestsQt.hpp"
 
 #include "QImageExamples.h"
 #include "QTableWidgetExamples.h"
-
-namespace
-{
-} // namespace
 
 TEST_CASE( "It approves a QImage" )
 {
