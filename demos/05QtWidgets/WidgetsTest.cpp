@@ -28,6 +28,10 @@ TEST_CASE( "It approves QImages" )
     auto defaultReporterDisposer = Approvals::useAsDefaultReporter(
         std::make_shared<Mac::BeyondCompareReporter>() );
 
+    auto default_namer_disposer =
+        SeparateApprovedAndReceivedDirectoriesNamer::
+            useAsDefaultNamer();
+
     std::vector<const char*> colors = {
         "red", "green", "blue", "purple" };
     for ( const auto& color : colors )
@@ -38,12 +42,13 @@ TEST_CASE( "It approves QImages" )
             ApprovalTestsQt::verifyQImage( image );
         }
     }
+
     // TODO 4: Write each image to a separate file
     // Catch2: SECTION()
     //  https://approvaltestscpp.readthedocs.io/en/latest/generated_docs/MultipleOutputFilesPerTest.html
 
     // TODO 5: Make it easier to approve the output
-    // AutoApproveReporter
-    // SeparateApprovedAndReceivedDirectoriesNamer
+    // a) AutoApproveReporter
+    // b) SeparateApprovedAndReceivedDirectoriesNamer
     //  https://approvaltestscpp.readthedocs.io/en/latest/generated_docs/Namers.html#separateapprovedandreceiveddirectoriesnamer
 }
