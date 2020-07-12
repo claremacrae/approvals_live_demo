@@ -12,7 +12,8 @@ namespace
 TEST_CASE( "It approves a QImage" )
 {
     QImage image( 100, 200, QImage::Format_RGB32 );
-    image.fill( "#800080" );
+    auto color = "#800080";
+    image.fill( color );
     ApprovalTestsQt::verifyQImage( image );
 }
 
