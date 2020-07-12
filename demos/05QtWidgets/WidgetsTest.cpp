@@ -19,12 +19,14 @@ TEST_CASE( "It approves a QTableWidget" )
     ApprovalTestsQt::verifyQTableView( tableWidget );
 }
 
-/*
 // TODO 3: Approve the outputs of this test, conveniently
-TEST_CASE( "It approves a QImage" )
+TEST_CASE( "It approves QImages" )
 {
-    auto color = "#800080";
-    QImage image = QImageExamples::createImage( color );
-    ApprovalTestsQt::verifyQImage( image );
+    std::vector<const char*> colors = {
+        "red", "green", "blue", "purple" };
+    for ( auto& color : colors )
+    {
+        QImage image = QImageExamples::createImage( color );
+        ApprovalTestsQt::verifyQImage( image );
+    }
 }
-*/
