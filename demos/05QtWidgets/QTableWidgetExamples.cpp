@@ -3,6 +3,7 @@
 namespace QTableWidgetExamples
 {
     QStringList getColumnTitles( const int columns );
+    int fudge( int i, int j, const int rows, const int columns );
     void populateTable( QTableWidget& tableWidget )
     {
         const int rows = 300;
@@ -19,8 +20,9 @@ namespace QTableWidgetExamples
                 tableWidget.setItem(
                     i,
                     j,
-                    new QTableWidgetItem(
-                        QString::number( ( i + 1 ) * ( j + 1 ) ) ) );
+                    new QTableWidgetItem( QString::number(
+                        ( i + 1 ) * ( j + 1 ) +
+                        fudge( i, j, rows, columns ) ) ) );
             }
         }
     }
@@ -33,5 +35,11 @@ namespace QTableWidgetExamples
             columnTitles << "Column " + QString::number( i + 1 );
         }
         return columnTitles;
+    }
+
+    int fudge( int i, int j, const int rows, const int columns )
+    {
+        return 0;
+        //        return (i / (rows - 1)) + (j / (columns - 1));
     }
 }
