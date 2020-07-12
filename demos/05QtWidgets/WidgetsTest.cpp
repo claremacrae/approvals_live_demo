@@ -4,8 +4,8 @@
 #include <QImage>
 #include <QTableWidget>
 
-#include "QImageExamples.h"
-#include "QTableWidgetExamples.h"
+#include "helpers/QImageExamples.h"
+#include "helpers/QTableWidgetExamples.h"
 
 using namespace ApprovalTests;
 using namespace ApprovalTestsQt;
