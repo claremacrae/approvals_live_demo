@@ -9,11 +9,17 @@ namespace
 {
 } // namespace
 
-TEST_CASE( "It approves a QImage" )
+QImage createImage( const char* color )
 {
     QImage image( 100, 200, QImage::Format_RGB32 );
-    auto color = "#800080";
     image.fill( color );
+    return image;
+}
+
+TEST_CASE( "It approves a QImage" )
+{
+    auto color = "#800080";
+    QImage image = createImage( color );
     ApprovalTestsQt::verifyQImage( image );
 }
 
