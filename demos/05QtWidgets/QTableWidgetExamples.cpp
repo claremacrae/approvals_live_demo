@@ -2,18 +2,15 @@
 
 namespace QTableWidgetExamples
 {
+    QStringList getColumnTitles( const int columns );
     void populateTable( QTableWidget& tableWidget )
     {
         const int rows = 2;
         const int columns = 3;
         tableWidget.setRowCount( rows );
         tableWidget.setColumnCount( columns );
-        QStringList columnTitles;
-        for ( int i = 0; i != columns; ++i )
-        {
-            columnTitles << "Column " + QString::number( i + 1 );
-        }
-        tableWidget.setHorizontalHeaderLabels( columnTitles );
+        tableWidget.setHorizontalHeaderLabels(
+            getColumnTitles( columns ) );
 
         for ( int i = 0; i != rows; ++i )
         {
@@ -26,5 +23,15 @@ namespace QTableWidgetExamples
                         QString::number( ( i + 1 ) * ( j + 1 ) ) ) );
             }
         }
+    }
+
+    QStringList getColumnTitles( const int columns )
+    {
+        QStringList columnTitles;
+        for ( int i = 0; i != columns; ++i )
+        {
+            columnTitles << "Column " + QString::number( i + 1 );
+        }
+        return columnTitles;
     }
 }
