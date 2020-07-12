@@ -8,9 +8,9 @@ TEST_CASE( "helloApprovals" )
     CHECK( HelloApprovals::helloApprovals() == "?" );
 }
 
+/*
 // TODO 2 Test HelloApprovals::helloPoetry("Vogon")
 
-/*
 TEST_CASE( "helloPoetry" )
 {
     CHECK( HelloApprovals::helloPoetry("Vogon") == "?" );
