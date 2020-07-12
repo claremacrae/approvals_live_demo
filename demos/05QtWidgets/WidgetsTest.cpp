@@ -3,23 +3,17 @@
 #include <QTableWidget>
 #include "ApprovalTestsQt.hpp"
 
+#include "QImageExamples.h"
 #include "QTableWidgetExamples.h"
 
 namespace
 {
 } // namespace
 
-QImage createImage( const char* color )
-{
-    QImage image( 100, 200, QImage::Format_RGB32 );
-    image.fill( color );
-    return image;
-}
-
 TEST_CASE( "It approves a QImage" )
 {
     auto color = "#800080";
-    QImage image = createImage( color );
+    QImage image = QImageExamples::createImage( color );
     ApprovalTestsQt::verifyQImage( image );
 }
 

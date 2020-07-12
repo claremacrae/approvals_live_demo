@@ -4,6 +4,8 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(${EXE_NAME}
         main.cpp
         WidgetsTest.cpp
+        QImageExamples.cpp
+        QImageExamples.h
         QTableWidgetExamples.cpp
         QTableWidgetExamples.h
         )
