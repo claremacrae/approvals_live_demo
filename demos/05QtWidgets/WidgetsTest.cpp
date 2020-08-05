@@ -22,22 +22,24 @@ TEST_CASE( "It approves a QTableWidget" )
     ApprovalTestsQt::verifyQTableView( tableWidget );
 }
 
-/*
 // TODO 3: Run this, and understand the output
 TEST_CASE( "It approves QImages" )
 {
-//    auto defaultReporterDisposer = Approvals::useAsDefaultReporter(
-//        std::make_shared<Mac::BeyondCompareReporter>() );
+    auto default_namer_disposer =
+        SeparateApprovedAndReceivedDirectoriesNamer::useAsDefaultNamer();
 
     std::vector<const char*> colors = {
         "red", "green", "blue", "purple" };
     for ( const auto& color : colors )
     {
-        QImage image = QImageExamples::createImage( color );
-        ApprovalTestsQt::verifyQImage( image );
+        SECTION(color)
+        {
+            QImage image = QImageExamples::createImage( color );
+            ApprovalTestsQt::verifyQImage( image );
+        }
     }
 }
- */
+
 
 /*
     // TODO 4: Write each image to a separate file
