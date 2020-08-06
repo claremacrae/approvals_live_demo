@@ -34,7 +34,7 @@
 
 * `const auto dateRegex = R"([A-Za-z]{3} [A-Za-z]{3} [\d ]\d \d\d:\d\d:\d\d \d\d\d\d)";`
 * `Scrubbers::createRegexScrubber()`
-    * could create a `date_regex` live template in CLion
+    * could create a `date_regex` live template in CLion - **fake it until we make it**
 * `[date_and_time]`
 
 ```c++
@@ -51,7 +51,7 @@
 
     Approvals::verifyExistingFile(
         filename, Options().withScrubber( scrubber ) );
- ```
+```
 
 ## Key Points
 

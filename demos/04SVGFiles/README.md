@@ -3,7 +3,7 @@
 ## Steps
 
 * Run the demo - the test fails
-    * Does the change matter?
+    * **Does the change matter**?
     * Can create derived copies of your file
     * For better visualisation
     * Don't need to version-control the extra copies
