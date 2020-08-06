@@ -6,3 +6,4 @@ Some sample code to demo ApprovalTests.cpp
 * [demos/02GildedRose](demos/02GildedRose/README.md)
 * [demos/03LogFiles](demos/03LogFiles/README.md)
 * [demos/04SVGFiles](demos/04SVGFiles/README.md)
+* [demos/05QtWidgets](demos/05QtWidgets/README.md)
