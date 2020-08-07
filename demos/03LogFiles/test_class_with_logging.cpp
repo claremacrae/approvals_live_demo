@@ -18,7 +18,7 @@ TEST_CASE( "Test ComplexOperation Log" )
         std::ofstream stream( filename );
         stuff.doStuff( stream );
     }
-    auto dateRegex = R"(Thu Aug  6 \d\d:\d\d:\d\d 2020)";
+    auto dateRegex = R"([A-Za-z]{3} [A-Za-z]{3} [\d ]\d \d\d:\d\d:\d\d \d\d\d\d)";
     auto replacement = "[date-and-time]";
     // Scrubber
     auto scrubber = Scrubbers::createRegexScrubber(dateRegex, replacement);
