@@ -10,5 +10,5 @@ TEST_CASE( "SVG Test 1" )
 {
     // TODO This test fails: how big is the difference in the image?
     SVGDrawing drawing = createDrawing( "drawing1.svg" );
-    Approvals::verify( drawing.content() );
+    Approvals::verify( drawing.content(), Options(SVGReporter()) );
 }
