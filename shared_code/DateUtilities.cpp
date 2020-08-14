@@ -1,6 +1,8 @@
 #include "DateUtilities.h"
 #include "StringUtilities.h"
 
+#include <iomanip>
+
 namespace DateUtilities
 {
     tm toUtc( time_t& tt )
