@@ -7,6 +7,7 @@ add_library(${LIB_NAME}
         ComplexOperation.h
         HelloApprovals.cpp
         HelloApprovals.h
+        DateUtilities.cpp
         DateUtilities.h
         FileUtilities.cpp
         FileUtilities.h
