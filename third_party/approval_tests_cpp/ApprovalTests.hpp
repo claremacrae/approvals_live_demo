@@ -4,4 +4,4 @@
 
 // This gives much faster builds,
 // but linker errors if main not set up
-#include "ApprovalTests.v.10.1.2.hpp"
+#include "ApprovalTests.v.10.3.0.hpp"
