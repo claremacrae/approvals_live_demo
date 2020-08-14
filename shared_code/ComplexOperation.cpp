@@ -5,7 +5,7 @@
 
 std::string convertSystemClockToString(const std::chrono::time_point<std::chrono::system_clock>& end)
 {
-    const std::string format = "%F %T";
+    const std::string format = "%F %T UTC";
     return DateUtilities::toString(end, format);
 }
 
