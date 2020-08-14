@@ -11,10 +11,10 @@ using namespace ApprovalTests;
 TEST_CASE( "Test ComplexOperation Log" )
 {
     // Arrange
+    ComplexOperation stuff;
+
     auto filename = Approvals::getDefaultNamer()->getReceivedFile(".log");
     std::ofstream stream( filename );
-
-    ComplexOperation stuff;
 
     // Act
     stuff.doStuff( stream );
