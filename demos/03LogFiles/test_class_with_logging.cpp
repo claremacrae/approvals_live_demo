@@ -1,4 +1,3 @@
-#include "HelloApprovals.h"
 #include <catch2/catch.hpp>
 #include <ApprovalTests.hpp>
 
