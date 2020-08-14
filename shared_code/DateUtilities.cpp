@@ -1,4 +1,5 @@
 #include "DateUtilities.h"
+#include "StringUtilities.h"
 
 namespace DateUtilities
 {
@@ -20,6 +21,6 @@ namespace DateUtilities
         time_t tt = std::chrono::system_clock::to_time_t( dateTime );
         tm tm_value = toUtc( tt );
 
-        return toString( std::put_time( &tm_value, format.c_str() ) );
+        return StringUtilities::toString( std::put_time( &tm_value, format.c_str() ) );
     }
 }
