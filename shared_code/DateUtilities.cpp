@@ -25,4 +25,10 @@ namespace DateUtilities
 
         return StringUtilities::toString( std::put_time( &tm_value, format.c_str() ) );
     }
+
+    std::string
+    toString( const std::chrono::system_clock::time_point& dateTime )
+    {
+        return toString( dateTime, "%F %T UTC" );
+    }
 }

@@ -11,6 +11,9 @@ namespace DateUtilities
     std::string
     toString( const std::chrono::system_clock::time_point& dateTime,
               const std::string& format );
+
+    std::string
+    toString( const std::chrono::system_clock::time_point& dateTime );
 }
 
 #endif //DEMO_DATEUTILITIES_H
