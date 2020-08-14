@@ -14,12 +14,12 @@ TEST_CASE( "Test ComplexOperation Log" )
     auto filename = Approvals::getDefaultNamer()->getReceivedFile(".log");
     std::ofstream stream( filename );
 
-    // Act
     ComplexOperation stuff;
+
+    // Act
     stuff.doStuff( stream );
 
-    stream.close();
-
     // Assert
+    stream.close();
     Approvals::verifyExistingFile(filename);
 }
