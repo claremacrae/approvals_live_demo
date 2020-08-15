@@ -13,12 +13,12 @@ using namespace ApprovalTests;
 TEST_CASE( "Test ComplexOperation Log" )
 {
     // Arrange
-    ComplexOperation stuff;
+    ComplexOperation operation;
 
     auto filename = Approvals::getDefaultNamer()->getReceivedFile(".log");
 
     // Act
-    stuff.doOperation( filename );
+    operation.doOperation( filename );
 
     // Assert
     Approvals::verifyExistingFile(filename);
