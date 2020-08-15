@@ -21,5 +21,5 @@ TEST_CASE( "Test ComplexOperation Log" )
     operation.doOperation( filename );
 
     // Assert
-    Approvals::verifyExistingFile(filename);
+    Approvals::verifyExistingFile( filename );
 }
