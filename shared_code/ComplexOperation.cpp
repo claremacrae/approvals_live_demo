@@ -3,6 +3,8 @@
 
 #include "DateUtilities.h"
 
+#include <fstream>
+
 std::string convertSystemClockToString(const std::chrono::time_point<std::chrono::system_clock>& end)
 {
     return DateUtilities::toString(end);
@@ -32,4 +34,10 @@ void ComplexOperation::doStuff( std::ostream& stream )
     logTimeAndStep( logger, "finished computation" );
 
     logger << "Done!\n";
+}
+
+void ComplexOperation::doStuff( const std::string& filename )
+{
+    std::ofstream outputStream( filename );
+    doStuff(outputStream);
 }
