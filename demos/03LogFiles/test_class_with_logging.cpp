@@ -15,11 +15,11 @@ TEST_CASE( "Test ComplexOperation Log" )
     // Arrange
     ComplexOperation operation;
 
-    auto filename = Approvals::getDefaultNamer()->getReceivedFile(".log");
+    auto logFile = Approvals::getDefaultNamer()->getReceivedFile(".log");
 
     // Act
-    operation.doOperation( filename );
+    operation.doOperation( logFile );
 
     // Assert
-    Approvals::verifyExistingFile( filename );
+    Approvals::verifyExistingFile( logFile );
 }
