@@ -5,18 +5,13 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/ostream_sink.h"
 
-void logTimeAndStep( spdlog::logger& logger, const std::string& step )
-{
-    logger.info( step );
-}
-
 void ComplexOperation::doStuff( std::ostream& stream )
 {
     auto sink =
         std::make_shared<spdlog::sinks::ostream_sink_mt>( stream );
     auto logger = spdlog::logger( "ComplexOperation", sink );
 
-    logTimeAndStep( logger, "started computation" );
+    logger.info( "started computation" );
 
     logger.info( "Doing step 1" );
     logger.info( "Doing step 2 - part 1" );
@@ -27,7 +22,7 @@ void ComplexOperation::doStuff( std::ostream& stream )
         logger.info( "Step 4 - section " + std::to_string( i ) );
     }
 
-    logTimeAndStep( logger, "finished computation" );
+    logger.info( "finished computation" );
 
     logger.info( "Done!" );
 }
