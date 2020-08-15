@@ -5,7 +5,7 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/ostream_sink.h"
 
-void ComplexOperation::doStuff( std::ostream& stream )
+void ComplexOperation::doOperation( std::ostream& stream )
 {
     auto sink =
         std::make_shared<spdlog::sinks::ostream_sink_mt>( stream );
@@ -27,8 +27,8 @@ void ComplexOperation::doStuff( std::ostream& stream )
     logger.info( "Done!" );
 }
 
-void ComplexOperation::doStuff( const std::string& filename )
+void ComplexOperation::doOperation( const std::string& filename )
 {
     std::ofstream outputStream( filename );
-    doStuff( outputStream );
+    doOperation( outputStream );
 }

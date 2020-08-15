@@ -7,9 +7,9 @@
 class ComplexOperation
 {
 public:
-    void doStuff( std::ostream& stream );
+    void doOperation( std::ostream& stream );
 
-    void doStuff( const std::string& filename );
+    void doOperation( const std::string& filename );
 };
 
 #endif //DEMO_COMPLEXOPERATION_H

@@ -22,7 +22,7 @@
         std::ofstream stream( filename );
 
         // Do stuff - write to the file
-        stuff.doStuff( stream );
+        stuff.doOperation( stream );
 
         // Close the file
     }
