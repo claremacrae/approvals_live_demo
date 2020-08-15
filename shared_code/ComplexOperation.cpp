@@ -9,7 +9,7 @@ void ComplexOperation::doOperation( std::ostream& stream )
 {
     auto sink =
         std::make_shared<spdlog::sinks::ostream_sink_mt>( stream );
-    auto logger = spdlog::logger( "ComplexOperation", sink );
+    auto logger = spdlog::logger( "Operation", sink );
 
     logger.info( "started computation" );
 
