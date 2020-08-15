@@ -5,6 +5,8 @@
 
 using namespace ApprovalTests;
 
+// Testing non-deterministic code
+
 // TODO Make this test of ComplexOperation::doStuff() pass,
 //      to enable refactoring work to start...
 
