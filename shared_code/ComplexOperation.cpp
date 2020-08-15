@@ -23,7 +23,6 @@ void ComplexOperation::doStuff( std::ostream& stream )
 {
     auto sink =
         std::make_shared<spdlog::sinks::ostream_sink_mt>( stream );
-    //    auto logger = std::make_shared<spdlog::logger>("stream_sync", sink);
     auto logger = spdlog::logger( "ComplexOperation", sink );
 
     logTimeAndStep( logger, "started computation" );
