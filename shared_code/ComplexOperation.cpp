@@ -1,22 +1,13 @@
 #include "ComplexOperation.h"
 
-#include "DateUtilities.h"
-
 #include <fstream>
 
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/ostream_sink.h"
 
-std::string convertSystemClockToString(
-    const std::chrono::time_point<std::chrono::system_clock>& end )
-{
-    return DateUtilities::toString(end);
-}
-
 void logTimeAndStep( spdlog::logger& logger, const std::string& step )
 {
-    auto end = std::chrono::system_clock::now();
-    logger.info( step + " at " + convertSystemClockToString(end) );
+    logger.info( step );
 }
 
 void ComplexOperation::doStuff( std::ostream& stream )
