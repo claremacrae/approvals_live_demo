@@ -10,6 +10,7 @@ void ComplexOperation::doOperation( std::ostream& stream )
     auto sink =
         std::make_shared<spdlog::sinks::ostream_sink_mt>( stream );
     auto logger = spdlog::logger( "Operation", sink );
+    logger.set_pattern("[%Y-%m-%d %H:%M:%S] [%l] %v");
 
     logger.info( "started computation" );
 
