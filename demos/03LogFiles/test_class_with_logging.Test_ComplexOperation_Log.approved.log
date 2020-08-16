@@ -1,0 +1,14 @@
+[2020-08-16 12:57:27.605] [Operation] [info] started computation
+[2020-08-16 12:57:27.605] [Operation] [info] Doing step 1
+[2020-08-16 12:57:27.605] [Operation] [info] Doing step 2 - part 1
+[2020-08-16 12:57:27.605] [Operation] [info] Doing step 2 - part 2
+[2020-08-16 12:57:27.605] [Operation] [info] Doing step 3 - testing if part 2 worked
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 1
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 2
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 3
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 4
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 5
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 6
+[2020-08-16 12:57:27.605] [Operation] [info] Step 4 - section 7
+[2020-08-16 12:57:27.605] [Operation] [info] finished computation
+[2020-08-16 12:57:27.605] [Operation] [info] Done!
