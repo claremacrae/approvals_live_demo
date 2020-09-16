@@ -1,5 +1,5 @@
 message(INFO " Hello from 05")
-set(EXE_NAME 05QtWidgets)
+set(EXE_NAME 05QTableWidget)
 set(CMAKE_CXX_STANDARD 11)
 add_executable(${EXE_NAME}
         main.cpp
