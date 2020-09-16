@@ -1,4 +1,5 @@
 #include <catch2/catch.hpp>
+#include <ApprovalTests.hpp>
 #include <ApprovalTestsQt.hpp>
 
 #include <QTableWidget>
@@ -14,13 +15,8 @@ TEST_CASE( "It approves QImages" )
 //    auto defaultReporterDisposer = Approvals::useAsDefaultReporter(
 //        std::make_shared<Mac::BeyondCompareReporter>() );
 
-    std::vector<const char*> colors = {
-        "red", "green", "blue", "purple" };
-    for ( const auto& color : colors )
-    {
-        QImage image = QImageExamples::createImage( color );
-        ApprovalTestsQt::verifyQImage( image );
-    }
+    QImage image = QImageExamples::createImage( "red" );
+    ApprovalTestsQt::verifyQImage( image );
 }
 
 /*
