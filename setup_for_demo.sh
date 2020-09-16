@@ -8,3 +8,4 @@ rm -rf demos/03LogFiles/approval_tests/
 rm -f  demos/04SVGFiles/approval_tests/*.received.*
 rm -f  demos/04SVGFiles/approval_tests/*.png
 rm -rf demos/05QTableWidget/approval_tests/
+rm -rf demos/06QImage/approval_tests/
