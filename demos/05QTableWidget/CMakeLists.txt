@@ -3,6 +3,7 @@ set(EXE_NAME 05QTableWidget)
 set(CMAKE_CXX_STANDARD 11)
 add_executable(${EXE_NAME}
         main.cpp
+        ImageTest.cpp
         TableWidgetTextTest.cpp
         helpers/QImageExamples.cpp
         helpers/QImageExamples.h
