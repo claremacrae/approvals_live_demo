@@ -2,12 +2,11 @@
 #include <ApprovalTests.hpp>
 #include <ApprovalTestsQt.hpp>
 
-#include <QTableWidget>
+#include <QImage>
 
 #include "helpers/QImageExamples.h"
 
 using namespace ApprovalTests;
-using namespace ApprovalTestsQt;
 
 // TODO 1: Run this, and understand the output
 TEST_CASE( "It approves QImages" )
