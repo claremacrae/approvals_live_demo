@@ -7,3 +7,4 @@ Some sample code to demo ApprovalTests.cpp
 * [demos/03LogFiles](demos/03LogFiles/README.md)
 * [demos/04SVGFiles](demos/04SVGFiles/README.md)
 * [demos/05QTableWidget](demos/05QTableWidget/README.md)
+* [demos/06QImage](demos/06QImage/README.md)
