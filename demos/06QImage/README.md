@@ -6,12 +6,6 @@
     * Note how Araxis Merge says the approved image is corrupt
 * Run again with BeyondCompare
     * Note how the "approved" image is 1 byte
-* Number of output files 
-    * Note how all each output file overwrites previous one
-    * Would be nice to include the colour in the filename
-* Add a SECTION() to get separate output files
-* Run again
-    * Review the names of output files
 * It's not convenient to approve image outputs
-    * Could auto-approve
-    * Or let the Diff tool do it
+    * Could auto-approve with `ApprovalTests::AutoApproveReporter`
+    * Or use `ApprovalTests::ClipboardReporter` and then paste the command in to a console window and run
